@@ -1,15 +1,18 @@
 <?php
 // Отримати дані з форми
-$userInput = $_POST['userInput'];
+$userInput = $_POST['userInput'] ?? '';
+
+// Отримати IP користувача
+$userIP = $_SERVER['REMOTE_ADDR'];
 
 // Відкрити файл для дописування
 $file = fopen("data.txt", "a");
 
-// Записати введене слово + перенос рядка
-fwrite($file, $userInput . "\n");
+// Записати слово + IP + перенос рядка
+fwrite($file, $userInput . "user Ip | IP: " . $userIP . "\n");
 
-// Закрити файл
 fclose($file);
 
-echo "Дані збережено! <a href='index.html'>Повернутися назад</a>";
+echo "Дані збережено!";
 ?>
+
