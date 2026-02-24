@@ -2,13 +2,15 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>Мій навчальний сайт</title>
+  <title>Test web</title>
 </head>
 <body>
-  <h1>Введіть слово</h1>
+  <h1>Натисніть кнопку</h1>
   <form action="save.php" method="post">
-    <input type="text" name="userInput" placeholder="Напишіть щось">
-    <button type="submit">Зберегти</button>
+    <!-- приховане поле, щоб щось передати -->
+    <input type="hidden" name="userInput" value="Сигнал від кнопки">
+    <button type="submit">Відправити сигнал</button>
   </form>
 </body>
 </html>
+
